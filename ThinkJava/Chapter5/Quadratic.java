@@ -1,4 +1,4 @@
-package ThinkJava;
+package ThinkJava.Chapter5;
 
 import java.util.Scanner;
 
@@ -8,11 +8,11 @@ public class Quadratic {
         // Quadratic equation look like this: axx + bx + c = 0
 
         final Scanner in = new Scanner(System.in);
-
+        
         // get and check for Double the variables A
-
+        
         System.out.print("Type A variable: ");
-
+        
         if (!in.hasNextDouble()) {
             final String word = in.next();
             System.err.println("\"" + word + "\" is not allowed, only numbers!");
