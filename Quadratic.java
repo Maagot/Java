@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Quadratic {
     public static void main(final String[] args) {
-        // axx + bx + c = 0
+
+        // Quadratic equation look like this: axx + bx + c = 0
 
         final Scanner in = new Scanner(System.in);
 
@@ -39,10 +40,11 @@ public class Quadratic {
                     System.err.println("\"" + word + "\" is not allowed, only numbers!");
 
                 } else {
+
                     final double c = in.nextDouble();
                     System.out.println("Variable c is: " + c);
 
-                    computingQuadraticEquation(a, b, c);
+                    computingQuadraticEquation(a, b, c); // go calculate the result
                 }
             }
         }
@@ -77,6 +79,7 @@ public class Quadratic {
         } else {
 
             // if descriminante lower 0 he didn't have roots, it's mean that equation not equal 0
+           
             System.out.println("Unfortunately, it is can't be equal");
 
         }
