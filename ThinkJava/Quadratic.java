@@ -1,3 +1,5 @@
+package ThinkJava;
+
 import java.util.Scanner;
 
 public class Quadratic {
