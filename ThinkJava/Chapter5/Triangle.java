@@ -26,7 +26,7 @@ public class Triangle {
         
         } else {
             System.out.println("Sorry, urfortunately one of these sticks are " + 
-            " too long for constructing the triangle.");
+            "too long for constructing the triangle.");
 
         }
 
