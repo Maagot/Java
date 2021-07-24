@@ -10,6 +10,7 @@ public class Quadratic {
         final Scanner in = new Scanner(System.in);
         
         // get and check for Double the variables A
+        System.out.println("Quadratic equation is AXX + BX + C = 0");
         
         System.out.print("Type A variable: ");
         
@@ -66,16 +67,15 @@ public class Quadratic {
 
             x1 = (-b + Math.sqrt(d)) / 2 * a;
             x2 = (-b - Math.sqrt(d)) / 2 * a;
-            System.out.println("Congratulations, here is 2 roots: " + x1 + " and " + x2 );
-            System.out.println("a * " + x1 + "*" + x1 + " + b * " + x1 + " * c = 0");
-            System.out.println("a * " + x2 + "*" + x2 + " + b * " + x2 + " * c = 0");
-
+            System.out.printf("Congratulations, here is 2 roots: %.1f and %.1f \n", x1, x2);
+            System.out.printf("A * %.0f * %.0f + b %.0f + c = 0 \n", x1, x1, x1);
+            System.out.printf("A * %.0f * %.0f + b * %.0f + c = 0 \n", x2, x2, x2);
         } else if (d == 0) {
 
             // If descriminante equal 0 he has only root
 
             x1 = -b / 2 * a;
-            System.out.println("Congratulations, here is 1 root: " + x1);
+            System.out.printf("Congratulations, here is 1 root: %.1f \n", x1);
             System.out.println("a * " + x1 + "*" + x1 + " + b * " + x1 + " * c = 0");
 
         } else {
