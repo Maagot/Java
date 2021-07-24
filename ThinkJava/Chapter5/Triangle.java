@@ -3,60 +3,49 @@ package ThinkJava.Chapter5;
 import java.util.Scanner;
 
 public class Triangle {
-    public static void main(String[] args) {
-        
+    public static void main(final String[] args) {
+
+        double a = getAVariable();
+
+   }
+
+    public static double getAVariable() {
+        double number = 1;
         final Scanner in = new Scanner(System.in);
-        
-        // get and check for Double the variables A
-        
-        System.out.print("Type A variable: ");
-        
-        if (!in.hasNextDouble()) {
-            double positiveCheck = in.nextDouble();
+
+        if (in.hasNextDouble()) {
+            final double positiveCheck = in.nextDouble();
 
             if (positiveCheck <= 0) {
-                final String word = in.next();
-                System.err.println("\"" + word + "\" is not allowed, only positive numbers!");
+                System.out.println("Zero and negative number is not allowed ");
 
-        
             } else {
-                final double a = in.nextDouble();
-                System.out.println("Variable a is: " + a);
+                number = positiveCheck;
 
-                //Get and check for Double variable b
-
-                System.out.print("Type B variable: ");
-
-                    if (!in.hasNextDouble()) {
-                        final String word = in.next();
-                        System.err.println("\"" + word + "\" is not allowed, only numbers!");
-
-                    } else {
-                        final double b = in.nextDouble();
-                        System.out.println("Variable b is: " + b);
-
-                        // Get and check for Double variable C  
-
-                        System.out.print("Type c variable: ");
-
-                        if (!in.hasNextDouble()) {
-                            final String word = in.next();
-                            System.err.println("\"" + word + "\" is not allowed, only numbers!");
-
-                        } else {
-                            final double c = in.nextDouble();
-                            System.out.println("Variable c is: " + c);
-
-                            if (a + b < c || a + c < b || c + b < a) {
-                                System.out.println("Sorry, but you can't create a triangle :c");
-
-                            } else {
-                                System.out.println("Yea, you can make a triangle c:");
-
-                        }
-                    }
-                }
             }
+
+        } else {
+            final String word = in.next();
+            System.out.println("\"" + word + "\" is not a number, " +
+            "so value of variable equal 1");
+            
+
         }
+
+        return number;
+    }
+
+    public static boolean computing(double a, double b, double c) {
+        boolean result;
+        if (a + b < c || a + c < b || c + b < a) {
+            result = false;
+
+        } else {
+            result = true;
+            
+        }
+
+        return result;
+
     }
 }
