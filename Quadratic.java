@@ -54,7 +54,12 @@ public class Quadratic {
         double x1;
         double x2;
 
+        // compute Equation
+
         if (d > 0) {
+
+            // If descriminante greater than 0 he has 2 roots
+
             x1 = (-b + Math.sqrt(d)) / 2 * a;
             x2 = (-b - Math.sqrt(d)) / 2 * a;
             System.out.println("Congratulations, here is 2 roots: " + x1 + " and " + x2 );
@@ -62,11 +67,16 @@ public class Quadratic {
             System.out.println("a * " + x2 + "*" + x2 + " + b * " + x2 + " * c = 0");
 
         } else if (d == 0) {
+
+            // If descriminante equal 0 he has only root
+
             x1 = -b / 2 * a;
             System.out.println("Congratulations, here is 1 root: " + x1);
             System.out.println("a * " + x1 + "*" + x1 + " + b * " + x1 + " * c = 0");
 
         } else {
+
+            // if descriminante lower 0 he didn't have roots, it's mean that equation not equal 0
             System.out.println("Unfortunately, it is can't be equal");
 
         }
