@@ -6,7 +6,7 @@ public class WhileLoopExercises {
         // twoDimensionLoop();
         // greekAlphabet();
         // loop(10);
-        square(4937284);
+        square(144);
         
     }
     
@@ -14,33 +14,28 @@ public class WhileLoopExercises {
         // x = (x0 + a/x0) /2
 
         double x = 6;
-        System.out.println(x);
 
         //get some computatuions for create the first sample of letter.
         for(x = 6; String.valueOf(x).length() < 6; x = (x + a / x) / 2) {
 
         }
 
+        String letter = "";
 
-        //get place of '.' in the number
-        int whereDot = String.valueOf(x).indexOf('.');
+        while (!letter.equals(".000")) {
 
-        //remove numbers before dot
-        String numbersAfterDotIncluded = String.valueOf(x).substring(whereDot);
-
-        System.out.println(numbersAfterDotIncluded); 
-
-        while (!numbersAfterDotIncluded.equals(".000")) {
             x = (x + a / x) / 2;           
 
-            whereDot = String.valueOf(x).indexOf('.');
-            numbersAfterDotIncluded = String.valueOf(x).substring(whereDot);
-        
-            System.out.println(x);
+            //get place of the dot in number
+            int whereDot = String.valueOf(x).indexOf('.');
+            //remove numbers before '.'
+            String numbersAfterDotIncluded = String.valueOf(x).substring(whereDot);
+            //refresh letter
+            letter = "";
 
-            //retain only 4 numbers after dot
+            //writing 4 latters after '.' in letter
             for (int i = 0; i < 4; i++) {  
-                numbersAfterDotIncluded = numbersAfterDotIncluded + numbersAfterDotIncluded.charAt(i);
+                letter = letter + numbersAfterDotIncluded.charAt(i);
 
             }
                         
