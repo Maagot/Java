@@ -6,57 +6,47 @@ public class WhileLoopExercises {
         // twoDimensionLoop();
         // greekAlphabet();
         // loop(10);
-        square(9);
+        square(4937284);
         
     }
-
+    
     public static void square(int a) {
         // x = (x0 + a/x0) /2
 
-        double x = 144;
+        double x = 6;
+        System.out.println(x);
 
-        while (String.valueOf(x).length() < 6) {
-            x = (x + a / x) / 2;           
-            
-            System.out.println(x);
-        } 
+        //get some computatuions for create the first sample of letter.
+        for(x = 6; String.valueOf(x).length() < 6; x = (x + a / x) / 2) {
 
-        //looking for dot in integer
-        // System.out.println(String.valueOf(x).indexOf('.'));
+        }
+
+
+        //get place of '.' in the number
         int whereDot = String.valueOf(x).indexOf('.');
 
         //remove numbers before dot
-        System.out.println(String.valueOf(x).substring(whereDot));
         String numbersAfterDotIncluded = String.valueOf(x).substring(whereDot);
-        System.out.println(" here ->" + numbersAfterDotIncluded);
 
+        System.out.println(numbersAfterDotIncluded); 
 
-        //Print result
-        System.out.printf("Square of %d is %.0f\n",a ,  Math.abs(x));
-        
-        
-        //retain only 4 numbers after dot
-        String letter = ""; // 
-        for (int i = 0; i < 4; i++) {  
-            letter = letter + numbersAfterDotIncluded.charAt(i);
-            System.out.println(letter);
-
-        }
-
-        //letter result = the last 5 numbers after
-
-        //TODO:"Add checking for 4 number after dot"
-
-        System.out.println("Comparing result is " + letter.equals(".000"));
-         
-        while (!letter.equals(".000")) {
+        while (!numbersAfterDotIncluded.equals(".000")) {
             x = (x + a / x) / 2;           
-            
-            System.out.println(x + " " + letter);
 
+            whereDot = String.valueOf(x).indexOf('.');
+            numbersAfterDotIncluded = String.valueOf(x).substring(whereDot);
+        
+            System.out.println(x);
 
+            //retain only 4 numbers after dot
+            for (int i = 0; i < 4; i++) {  
+                numbersAfterDotIncluded = numbersAfterDotIncluded + numbersAfterDotIncluded.charAt(i);
+
+            }
+                        
         }
-
+        
+        System.out.println("Square of " + a + " is " + Math.abs(Math.round(x)));
         
 
 
