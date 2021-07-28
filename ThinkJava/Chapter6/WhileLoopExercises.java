@@ -6,14 +6,14 @@ public class WhileLoopExercises {
         // twoDimensionLoop();
         // greekAlphabet();
         // loop(10);
-        square(144);
+        square(9);
         
     }
     
     public static void square(int a) {
         // x = (x0 + a/x0) /2
 
-        double x = 6;
+        double x;
 
         //get some computatuions for create the first sample of letter.
         for(x = 6; String.valueOf(x).length() < 6; x = (x + a / x) / 2) {
@@ -31,13 +31,7 @@ public class WhileLoopExercises {
             //remove numbers before '.'
             String numbersAfterDotIncluded = String.valueOf(x).substring(whereDot);
             //refresh letter
-            letter = "";
-
-            //writing 4 latters after '.' in letter
-            for (int i = 0; i < 4; i++) {  
-                letter = letter + numbersAfterDotIncluded.charAt(i);
-
-            }
+            letter = numbersAfterDotIncluded.substring(0, 4);
                         
         }
         
