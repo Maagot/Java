@@ -15,9 +15,9 @@ public class WhileLoopExercises {
 
         double x;
 
-        //get some computatuions for create the first sample of letter.
         for(x = 6; String.valueOf(x).length() < 6; x = (x + a / x) / 2) {
-
+            //get some computatuions for create the first sample of letter.
+        
         }
 
         String letter = "";
