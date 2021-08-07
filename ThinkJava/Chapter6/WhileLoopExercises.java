@@ -6,7 +6,7 @@ public class WhileLoopExercises {
         // twoDimensionLoop();
         // greekAlphabet();
         // loop(10);
-        square(9);
+        square(144);
         
     }
     
