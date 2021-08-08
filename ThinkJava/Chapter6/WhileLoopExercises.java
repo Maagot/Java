@@ -6,9 +6,9 @@ public class WhileLoopExercises {
         // twoDimensionLoop();
         // greekAlphabet();
         // loop(10);
-        // square(144);
-        System.out.println(checkPow(3, 3));
-        
+        // square(144);        
+        gauss(3, 3);
+
     }
 
     public static double myPowPosetive(double x, double n) {
@@ -31,8 +31,8 @@ public class WhileLoopExercises {
         if (n > 0) {
             result = myPowPosetive(x, n);
             
-        } else {
-            result = 1 / (myPowPosetive(x, n));
+        } else if (n < 0) {
+            result = 1 / (myPowPosetive(x, -n));
 
         }
 
@@ -40,14 +40,24 @@ public class WhileLoopExercises {
 
     }
     
-    public static void gauss(int x, int n) {
+    public static void gauss(double x, double n) {
+        double baseN = n;
+        System.out.println(baseN);
 
-        while (n <= 0) {
-            x = (-1);
+
+        while (n > 1) {
+            x = checkPow(-1, baseN) * checkPow(x, baseN*2) / baseN;
+            
+            System.out.println(x);
 
         }
 
+        
 
+    }
+
+    public static void gauss2(double x, double n) {
+        
 
     }
 
