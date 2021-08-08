@@ -4,10 +4,10 @@ public class Abecederian {
     public static void main(final String[] args) {
 
         // get words to compare
-        final String word = getWord();
+        String word = getWord();
         // assaign lenght to variables
-        final int amountOfLettersInWord = countLetters(word);
-
+        int amountOfLettersInWord = countLetters(word);
+        abecederianChecker(amountOfLettersInWord, word);
     }
 
     public static String getWord() {
@@ -24,17 +24,35 @@ public class Abecederian {
     public static int countLetters(final String word) {
         final int result = word.length();
         final int amountOfLettersInWord = result - 1;
-        System.out.println(amountOfLettersInWord);
 
         return amountOfLettersInWord;
 
     }
 
-    public static void abecederianChecker(final int amount, final String word) {
-        final int startPoint = 0;
+    public static void abecederianChecker(int amount, String word) {
+        int startPoint = 0;
+        char firstChar = 'a';
+        boolean checkingBoolean = true;
 
-        while (startPoint > amount) {
+        while (startPoint <= amount && checkingBoolean) {
             
+            char letter = word.charAt(startPoint);
+            
+            //checking
+            if (letter >= firstChar) {
+                firstChar = letter;
+                
+            } else { 
+                checkingBoolean = false;
+                System.out.println("You word isn't abecederian");  
+            }
+            
+            startPoint++;
+            
+        }
+
+        if (checkingBoolean) {
+            System.out.println("You word is abecederian");
         }
 
     }
