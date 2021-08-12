@@ -42,6 +42,7 @@ public class Abecederian {
             if (letter >= firstChar) {
                 firstChar = letter;
                 
+            
             } else { 
                 checkingBoolean = false;
                 System.out.println("You word isn't abecederian");  
@@ -56,4 +57,4 @@ public class Abecederian {
         }
 
     }
-}
+nn
