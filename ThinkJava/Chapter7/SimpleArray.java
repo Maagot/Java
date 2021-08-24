@@ -52,7 +52,8 @@ public class SimpleArray {
         
         int[] searchArray = {1, 2, 3, 4, 5};
 
-        int index = search(searchArray, 4);
+        int index = search(searchArray, 4
+        );
 
         System.out.println(index);
 
