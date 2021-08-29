@@ -1,3 +1,5 @@
+package ThinkJava.Chapter6;
+
 import java.util.Scanner;
 
 public class Doubloon {
@@ -53,7 +55,7 @@ public class Doubloon {
                 
                 if (letter == secondLetter) { // comparsion for equalent
                     checkingBoolean = false; 
-                    
+
                 }
                 
                 secondLetter = word.charAt(innerPoint); // set new letter for new round 
@@ -70,7 +72,14 @@ public class Doubloon {
 
         if (!checkingBoolean) {
             System.out.println("Your word is doubloon");
+        } else {
+            System.out.println("Your word isn't doubloon");
         }
+
+    }
+
+    public static void trueDoubloon(String word) {
+
 
     }
 
