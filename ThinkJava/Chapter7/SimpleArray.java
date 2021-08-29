@@ -1,3 +1,5 @@
+package ThinkJava.Chapter7;
+
 import java.util.Arrays;
 
 public class SimpleArray {
