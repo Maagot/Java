@@ -1,16 +1,9 @@
 package ThinkJava.Chapter6;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Doubloon {
-    public static void main(String[] args) {
-
-        String word = getWord();
-        int amountOfLetters = countLetters(word);
-        doubloonChecker(amountOfLetters, word);
-
-
-    }
     
     public static String getWord() {
         final Scanner in = new Scanner(System.in);
@@ -78,8 +71,42 @@ public class Doubloon {
 
     }
 
-    public static void trueDoubloon(String word) {
+    public static void main(String[] args) {
 
+//        String word = getWord();
+//        int amountOfLetters = countLetters(word);
+//        doubloonChecker(amountOfLetters, word);
+
+
+
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Is doubloon - " + trueDoubloon(in.nextLine()));
+
+
+    }
+
+    public static boolean trueDoubloon(String word) {
+
+        int counts[] = new int[26]; //create an empty alphabet counting array (26 letters in english alphabet)
+        String lower = word.toLowerCase(); //make inputted word in lowerCase
+
+        //counting letters and add every to array
+        for (char letter : lower.toCharArray()) {
+            int index = letter - 'a';
+            counts[index]++;
+
+        }
+
+        for (int count : counts) {
+            if (count != 0 && count != 2) {
+                return false;
+
+            }
+
+        }
+
+        return true;
 
     }
 
