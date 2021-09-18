@@ -6,11 +6,23 @@ public class Sieve {
     public static void main(String[] args) {
 //        sieveMethod(120);
 
+        int[] factorArray = {1, 2, 5, 10};
+        System.out.println(areFactors(10,factorArray));
+
     }
 
     public static boolean areFactors(int n, int[] fCheck) {
+        int checkVariable = 0;
 
-        return false;
+        for(int i = 0; i < fCheck.length; i++) {
+            if (n % fCheck[i] == 0) {
+                checkVariable++;
+            }
+
+
+        }
+
+        return checkVariable == fCheck.length;
 
     }
 
