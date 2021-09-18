@@ -17,9 +17,8 @@ public class Sieve {
         for(int i = 0; i < fCheck.length; i++) {
             if (n % fCheck[i] == 0) {
                 checkVariable++;
+
             }
-
-
         }
 
         return checkVariable == fCheck.length;
